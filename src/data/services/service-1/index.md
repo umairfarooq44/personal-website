@@ -1,6 +1,6 @@
 ---
 category: 'services'
-title: 'Web Design'
-icon: 'laptop-code'
-description: 'Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat.'
+title: 'Web Application Development'
+icon: 'fa-code'
+description: 'Developing fast, responsive and engaging single page web apps that bring your ideas to life.'
 ---

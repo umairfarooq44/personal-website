@@ -2,5 +2,5 @@
 category: 'contact'
 title: 'Address'
 icon: 'map-marker-alt'
-content: '235 Middle Neck Rd, Sands Point, New York, USA'
+content: '134/4 F Block,  P.C.H.S, Lahore, Pakistan'
 ---

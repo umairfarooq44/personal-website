@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'CSS'
+title: 'CSS3'
 percentage: 73
 ---

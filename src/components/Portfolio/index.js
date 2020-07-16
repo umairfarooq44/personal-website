@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Link from 'gatsby-link';
 import { motion } from 'framer-motion';
 
 import Container from 'components/ui/Container';
@@ -12,13 +11,16 @@ import * as Styled from './styles';
 const Posts = () => {
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "blog section" } }) {
+      markdownRemark(frontmatter: { category: { eq: "portfolio section" } }) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "blog" }, published: { eq: true } } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { category: { eq: "portfolio" } } }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
         edges {
           node {
             id
@@ -31,6 +33,7 @@ const Posts = () => {
               description
               date(formatString: "MMM DD, YYYY")
               tags
+              url
               cover {
                 childImageSharp {
                   fluid(maxWidth: 800) {
@@ -56,12 +59,12 @@ const Posts = () => {
           const {
             id,
             fields: { slug },
-            frontmatter: { title, cover, description, date, tags }
+            frontmatter: { title, cover, description, date, tags, url }
           } = item.node;
 
           return (
             <Styled.Post key={id}>
-              <Link to={slug}>
+              <a href={url} target="blank">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
                   <Styled.Card>
                     <Styled.Image>
@@ -79,7 +82,7 @@ const Posts = () => {
                     </Styled.Tags>
                   </Styled.Card>
                 </motion.div>
-              </Link>
+              </a>
             </Styled.Post>
           );
         })}
