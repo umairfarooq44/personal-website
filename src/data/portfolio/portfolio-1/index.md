@@ -3,6 +3,7 @@ category: 'portfolio'
 cover: './cover.jpeg'
 title: 'Pakistan Telehealth'
 url: 'https://telehealth.gov.pk/'
-description: 'Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat.'
-tags: ['react.js', 'redux', 'antd', 'Node.js']
+order: 7
+description: 'Pakistan Telehealth is used by the government of pakistan to fight against COVID-19 by connecting doctors and patients.'
+tags: ['React.js', 'Redux', 'Node.js', 'Antd', 'Webpack']
 ---

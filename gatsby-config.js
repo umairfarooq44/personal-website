@@ -59,6 +59,12 @@ module.exports = {
         tailwind: true,
         purgeOnly: [`src/assets/styles/global.css`]
       }
+    },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@umair_farooq`
+      }
     }
   ]
 };

@@ -1,7 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import Link from 'gatsby-link';
 import { motion } from 'framer-motion';
 
 import Container from 'components/ui/Container';
@@ -10,34 +8,26 @@ import TitleSection from 'components/ui/TitleSection';
 import * as Styled from './styles';
 
 const Posts = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+  const { allMediumPost } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "blog section" } }) {
-        frontmatter {
-          title
-          subtitle
-        }
-      }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "blog" }, published: { eq: true } } }) {
+      allMediumPost(sort: { fields: [createdAt], order: DESC }) {
         edges {
           node {
             id
-            html
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              description
-              date(formatString: "MMM DD, YYYY")
-              tags
-              cover {
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+            title
+            uniqueSlug
+            createdAt(formatString: "DD MMMM YYYY")
+            virtuals {
+              subtitle
+              tags {
+                name
               }
+              previewImage {
+                imageId
+              }
+            }
+            author {
+              name
             }
           }
         }
@@ -45,8 +35,8 @@ const Posts = () => {
     }
   `);
 
-  const sectionTitle = markdownRemark.frontmatter;
-  const posts = allMarkdownRemark.edges;
+  const sectionTitle = { title: 'Blog', subtitle: 'All my posts' };
+  const posts = allMediumPost.edges;
 
   return (
     <Container section>
@@ -55,31 +45,40 @@ const Posts = () => {
         {posts.map((item) => {
           const {
             id,
-            fields: { slug },
-            frontmatter: { title, cover, description, date, tags }
+            title,
+            createdAt,
+            uniqueSlug,
+            virtuals: {
+              tags,
+              subtitle: description,
+              previewImage: { imageId }
+            }
           } = item.node;
 
+          console.log(`https://miro.medium.com/fit/c/800/400/${imageId}`);
           return (
             <Styled.Post key={id}>
-              <Link to={slug}>
+              <a href={`https://medium.com/@umair_farooq/${uniqueSlug}`} target="blank">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
                   <Styled.Card>
-                    <Styled.Image>
-                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                    </Styled.Image>
+                    {imageId && (
+                      <Styled.Image>
+                        <img src={`https://miro.medium.com/fit/c/800/400/${imageId}`} alt={title} />
+                      </Styled.Image>
+                    )}
                     <Styled.Content>
-                      <Styled.Date>{date}</Styled.Date>
+                      <Styled.Date>{createdAt}</Styled.Date>
                       <Styled.Title>{title}</Styled.Title>
                       <Styled.Description>{description}</Styled.Description>
                     </Styled.Content>
                     <Styled.Tags>
                       {tags.map((item) => (
-                        <Styled.Tag key={item}>{item}</Styled.Tag>
+                        <Styled.Tag key={item.name}>{item.name}</Styled.Tag>
                       ))}
                     </Styled.Tags>
                   </Styled.Card>
                 </motion.div>
-              </Link>
+              </a>
             </Styled.Post>
           );
         })}

@@ -1,8 +1,9 @@
 ---
 category: 'portfolio'
 cover: './cover.png'
-title: 'Blog Post 4'
+title: 'Bridger'
+order: 3
 url: 'http://bridger.solutions/mobileapp/'
-description: 'Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat.'
-tags: ['Web Design', 'UX/UI']
+description: 'Bridger react native app for android and IOS to help brokers so they can submit photos for insurance directly from their iPhone or Android device.'
+tags: ['React-native', 'Redux', 'native-base', 'expo']
 ---

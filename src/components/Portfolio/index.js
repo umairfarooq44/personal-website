@@ -19,7 +19,7 @@ const Posts = () => {
       }
       allMarkdownRemark(
         filter: { frontmatter: { category: { eq: "portfolio" } } }
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { fields: frontmatter___order, order: DESC }
       ) {
         edges {
           node {

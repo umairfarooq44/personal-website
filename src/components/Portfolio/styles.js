@@ -33,8 +33,14 @@ export const Date = styled.h3`
 
 export const Tags = styled.div`
   ${tw`p-4 pt-2 mt-auto`}
+  overflow-wrap: anywhere;
 `;
 
 export const Tag = styled.span`
   ${tw`text-xs text-indigo-900 border border-pink-500 rounded-full px-2 py-1 mr-2`}
+  white-space: nowrap;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  display: inline-block;
+  margin-bottom: 4px;
 `;

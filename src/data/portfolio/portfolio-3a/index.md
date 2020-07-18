@@ -1,7 +1,9 @@
 ---
 category: 'portfolio'
 cover: './cover.png'
-title: 'Blog Post 4'
-description: 'Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat.'
-tags: ['Web Design', 'UX/UI']
+title: 'Hubii'
+order: 4
+url: 'https://github.com/hubiinetwork/hubii-core'
+description: 'Developed hubii wallet to manage different crypto coins and to have ability of transactions with different coins.'
+tags: ['React,js', 'Redux', 'Electron', 'Next.js', 'Antd', 'Styled-components']
 ---

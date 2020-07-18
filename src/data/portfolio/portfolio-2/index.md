@@ -2,6 +2,8 @@
 category: 'portfolio'
 cover: './cover.jpeg'
 title: 'Distribution Now'
-description: 'Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat.'
-tags: ['React.js', 'antd', 'styled-components']
+url: 'https://tvs.dnow.com/'
+order: 6
+description: 'DNow TVS is a portal which helps DNow to manage surveys, repair and management of valves and flanges of different oil and gas rigs.'
+tags: ['React.js', 'Redux', 'Antd', 'Webpack', 'Styled-components']
 ---
