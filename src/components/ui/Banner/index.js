@@ -5,14 +5,18 @@ import { Link } from 'gatsby';
 import Container from 'components/ui/Container';
 import Button from 'components/ui/Button';
 import TitleSection from 'components/ui/TitleSection';
+import FormatHtml from 'components/utils/FormatHtml';
 
 import * as Styled from './styles';
 
-const Banner = ({ title, subtitle, content, linkTo, linkText }) => (
+const Banner = ({ title, subtitle, content, linkTo, linkText, html }) => (
   <Styled.Banner>
     <Container section>
       <TitleSection title={title} subtitle={subtitle} />
-      <Styled.Content>{content}</Styled.Content>
+      {/* <Styled.Content>{content}</Styled.Content> */}
+      <Styled.Content>
+        <FormatHtml content={html} />
+      </Styled.Content>
       <Link to={linkTo}>
         <Button primary>{linkText}</Button>
       </Link>

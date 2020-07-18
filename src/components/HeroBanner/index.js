@@ -8,6 +8,7 @@ const HeroBanner = () => {
   const { markdownRemark } = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { category: { eq: "hero section" } }) {
+        html
         frontmatter {
           title
           subtitle
@@ -28,6 +29,7 @@ const HeroBanner = () => {
       content={heroBanner.content}
       linkTo={heroBanner.linkTo}
       linkText={heroBanner.linkText}
+      html={markdownRemark.html}
     />
   );
 };
