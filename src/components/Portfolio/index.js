@@ -58,7 +58,6 @@ const Posts = () => {
         {posts.map((item) => {
           const {
             id,
-            fields: { slug },
             frontmatter: { title, cover, description, date, tags, url }
           } = item.node;
 
