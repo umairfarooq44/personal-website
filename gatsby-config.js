@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby.JS`,
+    title: `Umair Farooq`,
     description: `Gatsby Markdown Personal Website Starter, using Styled Components, Tailwindcss and Framer Motion.`,
     author: `Umair Farooq`
   },
@@ -58,6 +58,12 @@ module.exports = {
       options: {
         tailwind: true,
         purgeOnly: [`src/assets/styles/global.css`]
+      }
+    },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@umair_farooq`
       }
     }
   ]

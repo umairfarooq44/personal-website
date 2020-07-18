@@ -1,9 +1,9 @@
 ---
 category: 'experiences'
-company: 'Forge Inc'
-position: 'UI/UX Designer'
-startDate: 'Mar 2010'
-endDate: 'Dec 2010'
+company: 'Blueeast'
+position: 'Associate Software Engineer'
+startDate: 'Nov 2016'
+endDate: 'Jan 2018'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+I worked on IOT app which is used to control home appliances like air conditioners using internet. I worked of reactjs web application communicating with server using graphql.

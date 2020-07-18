@@ -1,11 +1,12 @@
 ---
 category: 'experiences'
-company: 'Aizoon Reply'
-position: 'UI/UX Designer'
-startDate: 'Jan 2011'
-endDate: 'May 2013'
+company: 'Crewlogix'
+position: 'Front end developer'
+startDate: 'Feb 2018'
+endDate: 'Nov 2018'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Worked on different react and react-native projects. Following are details:
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+- hubii: worked with remote team and developed react components for hubii electron app. Developed wallet manager, striim in hubii app.
+- bridger: developed react-native which deals in the insurance of vehicles and tyres
