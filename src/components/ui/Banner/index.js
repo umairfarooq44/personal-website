@@ -15,7 +15,7 @@ const Banner = ({ title, subtitle, content, linkTo, linkText, html }) => (
       <TitleSection title={title} subtitle={subtitle} />
       {/* <Styled.Content>{content}</Styled.Content> */}
       <Styled.Content>
-        <FormatHtml content={html} />
+        <FormatHtml content={`<div>${html}</div>`} />
       </Styled.Content>
       <Link to={linkTo}>
         <Button primary>{linkText}</Button>
