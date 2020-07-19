@@ -12,7 +12,7 @@ const HeroBanner = () => {
         frontmatter {
           title
           subtitle
-          content
+          heroText
           linkTo
           linkText
         }
@@ -26,10 +26,9 @@ const HeroBanner = () => {
     <Banner
       title={heroBanner.title}
       subtitle={heroBanner.subtitle}
-      content={heroBanner.content}
+      content={heroBanner.heroText}
       linkTo={heroBanner.linkTo}
       linkText={heroBanner.linkText}
-      html={markdownRemark.html}
     />
   );
 };

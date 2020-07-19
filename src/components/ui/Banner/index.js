@@ -9,14 +9,18 @@ import FormatHtml from 'components/utils/FormatHtml';
 
 import * as Styled from './styles';
 
-const Banner = ({ title, subtitle, content, linkTo, linkText, html }) => (
+const Banner = ({ title, subtitle, content, linkTo, linkText }) => (
   <Styled.Banner>
     <Container section>
       <TitleSection title={title} subtitle={subtitle} />
-      {/* <Styled.Content>{content}</Styled.Content> */}
       <Styled.Content>
-        <FormatHtml content={`<div>${html}</div>`} />
+        {content.map((val) => (
+          <p>{val}</p>
+        ))}
       </Styled.Content>
+      {/* <Styled.Content>
+        <FormatHtml content={`<div>${html}</div>`} />
+      </Styled.Content> */}
       <Link to={linkTo}>
         <Button primary>{linkText}</Button>
       </Link>
