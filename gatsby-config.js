@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Umair Farooq`,
-    description: `Gatsby Markdown Personal Website Starter, using Styled Components, Tailwindcss and Framer Motion.`,
+    description: `My portfolio website`,
     author: `Umair Farooq`
   },
   plugins: [
@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `personal-website`,
+        name: `Umair-Farooq`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#ed64a6`,
