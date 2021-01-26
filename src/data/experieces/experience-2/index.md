@@ -1,7 +1,7 @@
 ---
 category: 'experiences'
 company: 'Crewlogix'
-position: 'Front end developer'
+position: 'Software Engineer'
 startDate: 'Feb 2018'
 endDate: 'Nov 2018'
 ---

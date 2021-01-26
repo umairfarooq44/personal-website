@@ -1,10 +1,12 @@
 ---
 category: 'experiences'
 company: 'VentureDive'
-position: 'Frontend Developer'
+position: 'Senior Software Engineer'
 startDate: 'Dec 2018'
 endDate: 'Present'
 ---
+
+I worked on ePharma which is B2B ecommerce web app for pharmacists so that they can sell and manage their products.
 
 I have worked and developed from the start on oil and gas managing web app DNow for one year. DNow helps manage valves and surveys of oil and gas rigs. I was also given the opportunity to technically lead the project and play my role as a developer as well.
 
