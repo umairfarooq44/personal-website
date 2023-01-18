@@ -1,9 +1,9 @@
 ---
 category: 'portfolio'
 cover: './cover.jpeg'
-title: 'Droobi'
+title: 'Distribution Now'
+url: 'https://tvs.dnow.com/'
 order: 5
-url: 'https://18.222.236.206/'
-description: 'Droobi is portal for doctors and dieticians to guide patient to cure diabetes. It provides programme to help patients fight diabetes '
-tags: ['React.js', 'Antd', 'Webpack', 'Redux']
+description: 'DNow TVS is a portal which helps DNow to manage surveys, repair and management of valves and flanges of different oil and gas rigs.'
+tags: ['React.js', 'Redux', 'Antd', 'Webpack', 'Styled-components']
 ---

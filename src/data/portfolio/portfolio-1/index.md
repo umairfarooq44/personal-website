@@ -1,9 +1,9 @@
 ---
 category: 'portfolio'
-cover: './cover.png'
-title: 'ePharma'
-url: 'http://d3fyv1ef6bowx0.cloudfront.net/'
+cover: './cover1.png'
+title: 'Morressier'
+url: 'https://www.morressier.com/'
 order: 7
-description: 'ePharma is a B2B ecommerce web app so that pharmacies can sell and manage their products. It has role management to manage different roles.'
-tags: ['React.js', 'Redux', 'Node.js', 'Material-ui', 'Webpack']
+description: 'Morressier DNow TVS is a web app which helps early stage research by managing events, handling submissions and publishing scientific journals.'
+tags: ['React.js', 'swr', 'Next.js', 'Micro frontend', 'Styled-components']
 ---

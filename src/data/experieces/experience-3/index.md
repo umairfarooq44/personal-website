@@ -3,7 +3,7 @@ category: 'experiences'
 company: 'VentureDive'
 position: 'Senior Software Engineer'
 startDate: 'Dec 2018'
-endDate: 'Present'
+endDate: 'Jul 2021'
 ---
 
 I worked on ePharma which is B2B ecommerce web app for pharmacists so that they can sell and manage their products.

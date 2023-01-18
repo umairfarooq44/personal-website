@@ -1,9 +1,9 @@
 ---
 category: 'portfolio'
-cover: './cover.jpeg'
-title: 'Distribution Now'
-url: 'https://tvs.dnow.com/'
+cover: './cover.png'
+title: 'Retailo'
+url: 'https://retailo.co/retailers'
 order: 6
-description: 'DNow TVS is a portal which helps DNow to manage surveys, repair and management of valves and flanges of different oil and gas rigs.'
-tags: ['React.js', 'Redux', 'Antd', 'Webpack', 'Styled-components']
+description: 'Retailo is an online regional B2B marketplace platform that serves small and medium-sized retail businesses, including kiryana and baqala stores.'
+tags: ['React-native', 'Redux', 'redux-thunk', 'Styled-components']
 ---

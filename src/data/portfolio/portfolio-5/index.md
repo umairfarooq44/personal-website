@@ -1,9 +1,9 @@
 ---
 category: 'portfolio'
-cover: './cover.jpeg'
-title: 'Donaco'
-url: 'https://donaco.co/'
-order: 2
-description: 'Developed donaco portal and widget so that widget can be placed at different websites to collect charity.'
-tags: ['React.js', 'Redux', 'Material-ui', 'Firebase', 'Firestore', 'Webpack']
+cover: './cover.png'
+title: 'Bridger'
+order: 3
+url: 'http://bridger.solutions/mobileapp/'
+description: 'Bridger react native app for android and IOS to help brokers so they can submit photos for insurance directly from their iPhone or Android device.'
+tags: ['React-native', 'Redux', 'native-base', 'expo']
 ---
