@@ -1,9 +1,9 @@
 ---
 category: 'portfolio'
 cover: './cover.png'
-title: 'Bridger'
-order: 3
-url: 'http://bridger.solutions/mobileapp/'
-description: 'Bridger react native app for android and IOS to help brokers so they can submit photos for insurance directly from their iPhone or Android device.'
-tags: ['React-native', 'Redux', 'native-base', 'expo']
+title: 'Hubii'
+order: 4
+url: 'https://github.com/hubiinetwork/hubii-core'
+description: 'Developed hubii wallet to manage different crypto coins and to have ability of transactions with different coins.'
+tags: ['React,js', 'Redux', 'Electron', 'Next.js', 'Antd', 'Styled-components']
 ---
