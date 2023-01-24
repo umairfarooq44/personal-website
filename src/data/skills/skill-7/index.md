@@ -1,5 +1,5 @@
 ---
 category: 'skills'
 title: 'React Native'
-percentage: 70
+percentage: 80
 ---

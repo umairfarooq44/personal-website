@@ -18,5 +18,10 @@ export const Image = styled.figure`
 `;
 
 export const Title = styled.h3`
-  ${tw`font-semibold my-4`};
+  ${tw`font-semibold`};
+`;
+
+export const SubTitle = styled.h4`
+  ${tw`text-xs w-full text-left`};
+  ${tw`text-center  mb-4`};
 `;
