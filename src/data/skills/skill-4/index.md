@@ -1,5 +1,5 @@
 ---
 category: 'skills'
 title: 'TypeScript'
-percentage: 60
+percentage: 70
 ---

@@ -20,13 +20,17 @@ const Testimonials = () => {
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "testimonials" } } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { category: { eq: "testimonials" } } }
+        sort: { fields: frontmatter___order, order: ASC }
+        ) {
         edges {
           node {
             id
             html
             frontmatter {
               title
+              subTitle
               cover {
                 childImageSharp {
                   fluid(maxWidth: 80) {
@@ -43,6 +47,7 @@ const Testimonials = () => {
 
   const sectionTitle = markdownRemark.frontmatter;
   const testimonials = allMarkdownRemark.edges;
+  console.log(testimonials)
 
   return (
     <Container section>
@@ -53,7 +58,7 @@ const Testimonials = () => {
             const {
               id,
               html,
-              frontmatter: { cover, title }
+              frontmatter: { cover, title, subTitle }
             } = item.node;
 
             return (
@@ -62,6 +67,7 @@ const Testimonials = () => {
                   <Img fluid={cover.childImageSharp.fluid} alt={title} />
                 </Styled.Image>
                 <Styled.Title>{title}</Styled.Title>
+                <Styled.SubTitle>{subTitle}</Styled.SubTitle>
                 <FormatHtml content={html} />
               </Styled.Testimonial>
             );
