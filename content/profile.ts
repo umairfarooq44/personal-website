@@ -1,6 +1,7 @@
 export const profile = {
   name: "Umair Farooq",
   role: "Senior Frontend Engineer",
+  photo: "/umair-farooq.jpg",
   intro:
     "I’m a senior frontend engineer with ten years of experience building web applications that handle a lot of data and still feel fast. Most recently, at Yaak in Berlin, I built the interface ML engineers use to search, review and curate thousands of hours of driving data for physical AI, with video, telemetry charts and GNSS maps kept in sync in one view.",
   about: [
