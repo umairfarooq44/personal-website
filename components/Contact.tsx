@@ -29,7 +29,7 @@ export default function Contact() {
             </li>
           ))}
           <li>
-            <a href={profile.cvPath} download>
+            <a href={profile.cvPath} target="_blank" rel="noopener noreferrer">
               CV (PDF)
             </a>
           </li>

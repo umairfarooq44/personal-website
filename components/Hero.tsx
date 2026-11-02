@@ -26,10 +26,11 @@ export default function Hero() {
       <div className="mt-7 flex flex-wrap gap-3">
         <a
           href={profile.cvPath}
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="rounded-[3px] border-[1.5px] border-ink bg-ink px-5 py-3 font-semibold text-page no-underline hover:border-signal hover:bg-signal hover:text-white"
         >
-          Download CV
+          View CV
         </a>
         <a
           href={`mailto:${profile.email}`}
