@@ -1,41 +1,51 @@
-# Personal Website
+# umairfarooq44.github.io
 
-This is a personal website using [Gatsby](https://www.gatsbyjs.org/), [Markdown](https://www.markdownguide.org/), [Styled Components](https://styled-components.com/), [Talwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/) & [React Font Awesome](https://github.com/FortAwesome/react-fontawesome).
+Personal website of Umair Farooq, Senior Frontend Engineer.
 
-## Quick start
+Built with Next.js (App Router, static export), TypeScript, Tailwind CSS 4 and uPlot.
 
-1.  **Create a Gatsby site.**
+## What's on the page
 
-    Use the Gatsby CLI to create a new site, using the Gatsby Markdown Personal Website starter.
+A single page with a sticky header: hero, a live telemetry playback, About, Skills,
+Experience, Projects, Recommendations and Contact.
 
-    ```shell
-    gatsby new my-site-name https://github.com/SaimirKapaj/gatsby-markdown-personal-website
-    ```
+The telemetry playback is a sample lap generated in the browser (`lib/drive.ts`),
+drawn as a route map and a uPlot chart that share one playhead
+(`components/telemetry/`). It loads on the client only, so uPlot stays out of the
+initial bundle.
 
-2.  **Develop**
+## Run locally
 
-    Navigate into your new site’s directory and start the development environment.
+```bash
+npm install
+npm run dev        # http://localhost:3000
+```
 
-    ```shell
-    gatsby develop
-    ```
+## Edit content
 
-    Your site is now running at `http://localhost:8000`
+- All copy is in `content/profile.ts`: intro, about, experience, projects,
+  recommendations, skills and links.
+- Project screenshots live in `public/projects/`, recommendation photos in
+  `public/testimonials/`.
+- Replace `public/Umair-Farooq-CV.pdf` when the CV changes.
+- `public/og.png` is the image shown when the site is shared on LinkedIn or WhatsApp.
+- `app/icon.svg` is the browser tab icon.
 
-3.  **Build**
+## Design
 
-    Get an optimized production build for your site generating static HTML and JavaScript, CSS bundles.
+Colours and fonts are defined once in `app/globals.css`: asphalt grey page, ink text,
+cobalt for links and data, lane-marking yellow for the moving marker, and Archivo
+(its width axis gives the wide headings). Keep these when refactoring.
 
-    ```shell
-    gatsby build
-    ```
+## Analytics
 
-4.  **Serve**
+Optional. Create a free GoatCounter site and set its code in `analytics.goatcounter`
+in `content/profile.ts`. Leave it empty to turn analytics off.
 
-    Starts a local server for testing your production site.
+## Build and deploy
 
-    ```shell
-    gatsby serve
-    ```
-
-    Your production site is now running at `http://localhost:9000`
+```bash
+npm run typecheck  # TypeScript check
+npm run build      # static site in ./out
+npm run deploy     # builds and pushes ./out to the master branch of umairfarooq44.github.io
+```
