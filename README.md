@@ -44,8 +44,29 @@ in `content/profile.ts`. Leave it empty to turn analytics off.
 
 ## Build and deploy
 
+Pushing to `master` deploys automatically (see below). To build or deploy by hand:
+
 ```bash
 npm run typecheck  # TypeScript check
 npm run build      # static site in ./out
 npm run deploy     # builds and pushes ./out to the master branch of umairfarooq44.github.io
 ```
+
+Stop `npm run dev` before building: both use the `.next` folder.
+
+## Automatic deploys
+
+`.github/workflows/deploy.yml` builds every pull request, and on every push to
+`master` publishes `out/` to the `umairfarooq44.github.io` repo. It needs a deploy key,
+set up once:
+
+1. Create a key pair (no passphrase):
+   `ssh-keygen -t ed25519 -C "pages-deploy" -f pages_deploy_key -N ""`
+2. In the **umairfarooq44.github.io** repo: Settings → Deploy keys → Add deploy key.
+   Paste the contents of `pages_deploy_key.pub` and tick **Allow write access**.
+3. In the **personal-website** repo: Settings → Secrets and variables → Actions →
+   New repository secret. Name it `PAGES_DEPLOY_KEY` and paste the contents of
+   `pages_deploy_key` (the private key).
+4. Delete both key files from your computer.
+
+Watch runs under the Actions tab. Run one manually with "Run workflow".
