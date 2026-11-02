@@ -13,7 +13,7 @@
     "deploy": "next build && gh-pages -d out -t -b master -r git@github.com:umairfarooq44/umairfarooq44.github.io.git"
   },
   "dependencies": {
-    "next": "^15.5.0",
+    "next": "^16.4.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "uplot": "^1.6.32"
