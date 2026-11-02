@@ -1,0 +1,51 @@
+# Builds the site on every pull request, and on every push to master also
+# publishes it to https://umairfarooq44.github.io (the umairfarooq44.github.io repo).
+# One-time setup: see "Automatic deploys" in README.md (needs the PAGES_DEPLOY_KEY secret).
+name: Build and deploy
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Never run two deploys at once; a newer push replaces an older run.
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Publish to umairfarooq44.github.io
+        if: github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.PAGES_DEPLOY_KEY }}
+          external_repository: umairfarooq44/umairfarooq44.github.io
+          publish_branch: master
+          publish_dir: ./out
+          user_name: Umair Farooq
+          user_email: umairfarooq44@gmail.com
+          commit_message: Deploy ${{ github.sha }}
