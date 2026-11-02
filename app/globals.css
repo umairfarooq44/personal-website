@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* "static" so the telemetry chart can read these at runtime. */
+@theme static {
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --color-page: #e8ebef;
+  --color-surface: #ffffff;
+  --color-ink: #16202b;
+  --color-body: #2b3644;
+  --color-muted: #5b6674;
+  --color-rule: #d4d9df;
+  --color-signal: #2747d9;
+  --color-mark: #f0b429;
+}
+
+@utility font-wide {
+  font-stretch: 125%;
+}
+@utility font-semiwide {
+  font-stretch: 112%;
+}
+
+@layer base {
+  html {
+    background: var(--color-page);
+    color: var(--color-body);
+    font-size: 106.25%; /* 17px */
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  ::selection {
+    background: var(--color-mark);
+    color: var(--color-ink);
+  }
+
+  a {
+    color: var(--color-signal);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-signal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
